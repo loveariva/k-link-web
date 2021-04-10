@@ -57,6 +57,7 @@ Swagger API Docs -> http://localhost:3000/docs
 
 Login to get access token -> 
 
+```console
 curl -X 'POST' \
   'http://localhost:3000/api/login' \
   -H 'accept: application/json' \
@@ -65,7 +66,7 @@ curl -X 'POST' \
   "email": "admin@email.com",
   "password": "password"
 }'
-
+```
 
 Product list ->
 
