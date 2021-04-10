@@ -53,9 +53,13 @@ npm run dev
 > The server address will be displayed to you as `http://localhost:3000`.
 
 #### Step 4: Access your App
-Swagger API Docs -> http://localhost:3000/docs
+Swagger API Docs
 
-Login to get access token -> 
+```console
+http://localhost:3000/docs
+```
+
+Login to get access token 
 
 ```console
 curl -X 'POST' \
@@ -67,29 +71,31 @@ curl -X 'POST' \
   "password": "password"
 }'
 ```
+Product list
 
-Product list ->
-
+```console
 curl -X 'GET' \
   'http://localhost:3000/api/products' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo' \
   -H 'accept: application/json'
+```
 
   Change Authorization token with access token that you get from login above.
 
+Cart list
 
-Cart list ->
-
+```console
 curl -X 'GET' \
   'http://localhost:3000/api/carts' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo' \
   -H 'accept: application/json'
+```
 
   Change Authorization token with access token that you get from login above.
 
+Add item to Cart
 
-Add item to Cart ->
-
+```console
 curl -X 'POST' \
   'http://localhost:3000/api/carts/add-item' \
   -H 'accept: application/json' \
@@ -134,47 +140,27 @@ curl -X 'POST' \
   "quantity": 5,
   "checkout": ""
 }'
+```
+  Change Authorization token with access token that you get from login above.
 
+Cart checkout
 
-Cart checkout ->
-
+```console
 curl -X 'POST' \
   'http://localhost:3000/api/carts/checkout/T-000-001' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo'
+```
+  Change Authorization token with access token that you get from login above.
 
+Payment checkout
 
-Payment checkout ->
-
+```console
 curl -X 'POST' \
   'http://localhost:3000/api/carts/payment/T-000-001' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo'
-
-
-Users list -> 
-
-curl -X 'GET' \
-  'http://localhost:3000/api/users' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo' \
-  -H 'accept: application/json'
-
+```
   Change Authorization token with access token that you get from login above.
-
-Create new user ->
-
-curl -X 'POST' \
-  'http://localhost:3000/api/users' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjE4MDIxNTEzLCJleHAiOjE2MTgxMDc5MTN9.Yflkrg6NDc2-lVFY6NUaAq7UEgVqW0rhkkZOEjYqKjo' \
-  -d '{
-  "first_name": "ariawan",
-  "last_name": "graha",
-  "email": "ariawan@example.com",
-  "password": "mautauaja"
-}'
-
- Change Authorization token with access token that you get from login above.
