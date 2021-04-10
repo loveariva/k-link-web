@@ -23,7 +23,7 @@ Install a MySQL database.
 Install Redis
 
 #### Step 2: Application Set up and Configuration
-Clone http.....
+Clone k-link-web app.
 
 Create your database.
 
