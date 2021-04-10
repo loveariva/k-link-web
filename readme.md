@@ -154,7 +154,7 @@ curl -X 'POST' \
 ```
   Change Authorization token with access token that you get from login above.
 
-Payment checkout
+Payment confirmation
 
 ```console
 curl -X 'POST' \
